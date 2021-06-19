@@ -20,8 +20,9 @@ The algorithm uses a tree's 3D geometric shape to find the tree. It contains 2 m
 
 ### Filtering clusters:
 Three levels of filtering is applied
-1) First, those clusters which correspond to the general size of a tree(for the below reported performance, size = 50 to 2400 points) are kept & the rest are discarded.![clusters_after_stage2_step1](https://user-images.githubusercontent.com/45140884/122628805-03c8c480-d0d6-11eb-9320-9a94a744f072.jpg)
-2) Second stage of filtering is done by discarding those clusters with high curvature.
+1) First, those clusters which correspond to the general size of a tree(for the below reported performance, size = 50 to 2400 points) are kept & the rest are discarded.
+![clusters_after_stage2_step1](https://user-images.githubusercontent.com/45140884/122628805-03c8c480-d0d6-11eb-9320-9a94a744f072.jpg)
+3) Second stage of filtering is done by discarding those clusters with high curvature.
    #### Cluster's curvature:
    1) Project all the points in the cluster onto XY-plane.
    2) Find the median of radii of circles passing through all possible 3-point combinations from these projections.
