@@ -32,7 +32,9 @@ Three levels of filtering is applied
 3) Third stage of filtering is based on the observation that:
    1) Planar surfaces (of a facade, grass, vehicle, etc) have large radius & hence, more likely than not, they completely reside inside the median cylinder.
    2) Whereas, curved surfaces (like clusters of foliage/trunk/entire tree) have smaller radius & hence, clusters corresponding to curved surfaces tend to protrude out of their median cylinder.
-   3) This was able to remove: portions of facades(map 3_aj), current poles & vehicles(map 3_ak)
+   This was able to remove: portions of facades(map 3_aj), current poles & vehicles(map 3_ak)
+
+
 
 ## Visualization:
 The VRML Viewer [Qiew](http://www.qiew.org/) was used to visualize the wrl files.
