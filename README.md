@@ -32,8 +32,15 @@ Three levels of filtering is applied
 3) Third stage of filtering is based on the observation that:
    1) Planar surfaces (of a facade, grass, vehicle, etc) have large radius & hence, more likely than not, they completely reside inside the median cylinder.
    2) Whereas, curved surfaces (like clusters of foliage/trunk/entire tree) have smaller radius & hence, clusters corresponding to curved surfaces tend to protrude out of their median cylinder.
-   This was able to remove: portions of facades(map 3_aj), current poles & vehicles(map 3_ak)
+   This was able to remove: portions of facades(map 3_aj), current poles & vehicles(map 3_ak)![FINAL_3_aj_after_stage2_step3](https://user-images.githubusercontent.com/45140884/122637020-10671000-d10a-11eb-9503-e6698d8e4c11.jpg)
+![FINAL_3_ak_before_vs_after_stage2_step3](https://user-images.githubusercontent.com/45140884/122637025-13fa9700-d10a-11eb-879a-ee2de46ea058.jpg)
 
+
+## Output
+The final output of the algorithm for the maps 2_ac, 2_al, 3_ak, 3_al from the dataset are shown below![2_ac_GTvsOP](https://user-images.githubusercontent.com/45140884/122637113-8cf9ee80-d10a-11eb-9c85-49d10268e99d.jpg)
+![2_al_GTvsOP](https://user-images.githubusercontent.com/45140884/122637116-91260c00-d10a-11eb-971f-8cc6d02f10e0.jpg)
+![3_ak_GTvsOP](https://user-images.githubusercontent.com/45140884/122637120-94b99300-d10a-11eb-831e-60481ad70227.jpg)
+![3_al_GTvsOP](https://user-images.githubusercontent.com/45140884/122637121-97b48380-d10a-11eb-857d-6b6b2689d166.jpg)
 
 
 ## Visualization:
