@@ -40,8 +40,8 @@ Three levels of filtering are applied
 
 ## Output
 The final output of the algorithm for the maps: 2_ac, 2_al, 3_ak, 3_al of the dataset are shown below.![2_ac_GTvsOP](https://user-images.githubusercontent.com/45140884/122637113-8cf9ee80-d10a-11eb-9c85-49d10268e99d.jpg)
-![2_al_GTvsOP](https://user-images.githubusercontent.com/45140884/122637116-91260c00-d10a-11eb-971f-8cc6d02f10e0.jpg)
-![3_ak_GTvsOP](https://user-images.githubusercontent.com/45140884/122637120-94b99300-d10a-11eb-831e-60481ad70227.jpg)
+![2_al_GTvsOP(1)](https://user-images.githubusercontent.com/45140884/122650574-614e2700-d151-11eb-9f6a-796ebb8f7211.jpg)
+![3_ak_GTvsOP(1)](https://user-images.githubusercontent.com/45140884/122650579-63b08100-d151-11eb-9aaf-bc8b6f86627f.jpg)
 ![3_al_GTvsOP](https://user-images.githubusercontent.com/45140884/122637121-97b48380-d10a-11eb-857d-6b6b2689d166.jpg)
 
 
