@@ -28,3 +28,11 @@ Three levels of filtering is applied
    3) This gives an estimate of the curvature of a cluster's top view.
    4) Visualization: For each cluster, a circle is drawn with the above obtained median radius & it is projected onto planes parallel to XY-plane but with different z-coordinate, so that a partially/completely enclosing cylinder is formed.(referred to as median cylinder.)
 ![median_cylinders](https://user-images.githubusercontent.com/45140884/122630676-31683a80-d0e3-11eb-9542-0ca98e33a981.png)
+   Clusters remaining after 2nd stage of visualization:
+3) Third stage of filtering is based on the observation that:
+   1) Planar surfaces (of a facade, grass, vehicle, etc) have large radius & hence, more likely than not, they completely reside inside the median cylinder.
+   2) Whereas, curved surfaces (like clusters of foliage/trunk/entire tree) have smaller radius & hence, clusters corresponding to curved surfaces tend to protrude out of their median cylinder.
+   3) This was able to remove: portions of facades(map 3_aj), current poles & vehicles(map 3_ak)
+
+## Visualization:
+The VRML Viewer [Qiew](http://www.qiew.org/) was used to visualize the wrl files.
