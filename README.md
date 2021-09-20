@@ -19,7 +19,8 @@ The algorithm uses a tree's 3D geometric shape to recognize a tree. It contains 
 Output of 'Forming Clusters' part of the algo for the map 2_ac in the dataset(each cluster shown with a separate color):![all_clusters_vs_GT](https://user-images.githubusercontent.com/45140884/122628801-fdd2e380-d0d5-11eb-8bfb-bafa23984d64.jpg)
 
 
-### Filtering clusters:
+
+### 2) Filtering clusters:
 Three levels of filtering are applied
 1) First, those clusters which correspond to the general size of a tree(for the above reported performance, size = 50 to 2400 points) are kept & the rest are discarded.
 ![clusters_after_stage2_step1](https://user-images.githubusercontent.com/45140884/122628805-03c8c480-d0d6-11eb-9320-9a94a744f072.jpg)
