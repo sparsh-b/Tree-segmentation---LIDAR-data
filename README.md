@@ -18,15 +18,13 @@
 
 - ### A. Forming Clusters:
    1. A point is randomly chosen from the entire map & its neighbors are found. Then, neighbors to these 1st set of neighbors are found & this process is continued (until no neighbors are found).
-   2. At each step of expansion:
-   
+   2. At each step of expansion:   
       a.  If the range of z-coordinates of the cluster doesn't vary much (it means the cluster is part of a horizontal object & since trees are vertical), the cluster is discarded. Then, the above 1st step is repeated.
-   
+      
       b.  Else, if the range of z-coordinates of the cluster vary enough but there is crowding in the bottom, it means that the cluster contains both a vertical object & a surrounding horizontal object (eg: tree's trunk + side walk around the trunk). These crowded points are removed so that, in the next step, the cluster expands only in the vertical direction & not in the horizontal direction.
       <p align="center">
          <img src="https://drive.google.com/uc?export=view&id=1AiuiaWgM8Ju43MGILoV95q0QFUNxwM_Z"/>
       </p>
-     
       In the above picture, it can be seen that without ii-b part of the algo, cluster expanded (also) towards the side walk & included more points from the same. But with ii-b part of the algo in place, cluster expanded only towards the top of the tree.
 
    3. Output of 'Forming Clusters' part of the algorithm for the map 2_ac in the dataset (each cluster is randomly assigned a color):
@@ -35,47 +33,41 @@
       </p>
 
 
+- ### B. Filtering clusters:
+   - Three levels of filtering are applied in this stage. 
+   - #### First level:
+      - Those clusters which correspond to the general size of a tree are kept & the rest are discarded (here, a size of 50 to 2400 points is used).
+      <p align="center">
+         <img src="https://drive.google.com/uc?export=view&id=1vlSHuNPj9c8eE3nWa0vYZGZk3FOqRXo_"/>
+      </p>   
 
-### B) Filtering clusters:
-Three levels of filtering are applied in this stage. 
-   #### First level:
-   Those clusters which correspond to the general size of a tree are kept & the rest are discarded (here & in the results reported above, a size of 50 to 2400 points is used).
-<p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1vlSHuNPj9c8eE3nWa0vYZGZk3FOqRXo_"/>
-</p>   
-
-   #### Second level:
-   This stage of filtering is based on Cluster's curvature.
-   ##### Calculation of Cluster's curvature:
-   1) Project all the points of the cluster onto XY-plane (A tree's trunk & foliage are curved along the Z-axis. Hence, projections of the cluster onto XY-plane is considered).
-   2) Find the median of radii of circles passing through all possible 3-point combinations from these projections.
-   3) In practice, this becomes a computational bottleneck for big clusters. So, only 10^6 randomly chosen combinations are used. This gives an estimate of the curvature of a cluster's top view.
-
-   Finally, those clusters with big radii of curvature (less curved) are discarded.
+   - #### Second level:
+      - This stage of filtering is based on Cluster's curvature.
+      - ##### Calculation of Cluster's curvature:
+         - Project all the points of the cluster onto XY-plane (A tree's trunk & foliage are curved along the Z-axis. Hence, projections of the cluster onto XY-plane is considered).
+         - Find the median of radii of circles passing through all possible 3-point combinations from these projections.
+         - In practice, this becomes a computational bottleneck for big clusters. So, only 10^6 randomly chosen combinations are used. This gives an estimate of the curvature of a cluster's top view.
+      - Finally, those clusters with big radii of curvature (less curved) are discarded.
       
-   ##### Visualization:
-   For each cluster, a circle is drawn with the above obtained median radius & it is projected onto planes parallel to XY-plane so that a cylinder is formed around each cluster (referred to as median cylinder).
+      - ##### Visualization:
+         - For each cluster, a circle is drawn with the above obtained median radius & it is projected onto planes parallel to XY-plane so that a cylinder is formed around each cluster (referred to as median cylinder).
 
-   The below image shows clusters before & after 2nd level of filtering along with their median cylinders:
-   <p align="center">
-      <img src="https://drive.google.com/uc?export=view&id=1wYgkr7RQtMUMx_z_pK4ehdZN4qDfIkd1"/>
-   </p>
+         - The below image shows clusters before & after 2nd level of filtering along with their median cylinders:
+         <p align="center">
+            <img src="https://drive.google.com/uc?export=view&id=1wYgkr7RQtMUMx_z_pK4ehdZN4qDfIkd1"/>
+         </p>
 
-
-   #### Third level:
-   This level of filtering is based on the observation that:
-   1) Planar surfaces (like facade, lawn grass, vehicle, etc) have large radius of curvature & more likely than not, they completely reside inside the median cylinder.
-   2) Whereas, curved surfaces (like foliage/trunk/entire tree) have smaller radius of curvature. Consequently, clusters corresponding to curved surfaces tend to protrude out of their median cylinder.
-   This was able to remove: portions of facades (map 3_aj), current poles & vehicles (map 3_ak)
-   <p align="center">
-      <img src="https://drive.google.com/uc?export=view&id=1Y_PAWtws060hQF_EMXZgXN6h6vsXVn0H"/>
-   </p>
-   <p align="center">
-      <img src="https://drive.google.com/uc?export=view&id=1vIvr21Y9VfoA_rBv_xfNVCKppwta4YLp"/>
-   </p>
-
-### Note:
-1) Direction of Gravity is taken as -ve Z-axis.
+   - #### Third level:
+      - This level of filtering is based on the observation that:
+         - 1) Planar surfaces (like facade, lawn grass, vehicle, etc) have large radius of curvature & more likely than not, they completely reside inside the median cylinder.
+         - 2) Whereas, curved surfaces (like foliage/trunk/entire tree) have smaller radius of curvature. Consequently, clusters corresponding to curved surfaces tend to protrude out of their median cylinder.
+      - This was able to remove: portions of facades (map 3_aj), current poles & vehicles (map 3_ak)
+      <p align="center">
+         <img src="https://drive.google.com/uc?export=view&id=1Y_PAWtws060hQF_EMXZgXN6h6vsXVn0H"/>
+      </p>
+      <p align="center">
+         <img src="https://drive.google.com/uc?export=view&id=1vIvr21Y9VfoA_rBv_xfNVCKppwta4YLp"/>
+      </p>
 
 
 ## Output
