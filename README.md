@@ -13,8 +13,8 @@
 
 ## Algorithm:
 - The algorithm recognizes trees using their 3D geometric shape. It consists of 2 parts:
-   - A. Forming Clusters - Group the points into clusters based on proximity & the range of cluster's z-coordinates.
-   - B. Filtering Clusters - Filter out irrelevant clusters so that only those corresponding to the trees remain.
+   - A. <b>Forming Clusters</b> - Group the points into clusters based on proximity & the range of cluster's z-coordinates.
+   - B. <b>Filtering Clusters</b> - Filter out irrelevant clusters so that only those corresponding to the trees remain.
 
 - ### A. Forming Clusters:
    1. A point is randomly chosen from the entire map & its neighbors are found. Then, neighbors to these 1st set of neighbors are found & this process is continued (until no neighbors are found).
