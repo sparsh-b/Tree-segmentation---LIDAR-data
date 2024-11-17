@@ -1,7 +1,7 @@
 # Tree-segmentation---LiDAR-data
-- This repository contains an algorithm to segment trees from LiDAR maps of urban outdoors - implemented in C++.
-- The algorithm, as described below, leverages the geometrical shape of the trees to segment them.
-- Neither Deep Learning nor any software library is used.
+- This repository contains a novel algorithm to segment trees from LiDAR maps of urban outdoors - implemented in C++.
+- The algorithm, as described below, leverages the geometrical shape of the trees to segment them. It doesn't use Deep Learning.
+- <u>Implementation:</u> The algorithm is implemented from scratch without using any software library.
 
 ## Performance:
 - The algorithm was tested on the [Oakland 3-D Point Cloud Dataset](https://www.cs.cmu.edu/~vmr/datasets/oakland_3d/cvpr09/doc/).
